@@ -51,25 +51,26 @@ import java.util.List;
         public float getValor() { return valor; }
         public void setValor(float valor) { this.valor = valor; }
 
-        int i = -1;
+        // adiciona o novo proprietario para a exibicao do atual dono e adiciona o mesmo no historico
         public void adicionarProprietarios(String cpfDono) {
             this.cpfDono = cpfDono;
             donos.add(cpfDono);
             historico.add(cpfDono);
             System.out.println("Proprietário adicionado...");
-
         }
-
+        
+        //remove o ultimo proprietario da lista
         public void removerProprietarios(String cpfDono){
             donos.remove(cpfDono);
             System.out.println("Proprietário removido. ");
         }
-
+        
+        //exibi o historico e o ultimo e atual proprietario
         public void exibirProprietarios(){
-            //lista de propietarios
-
+            //historico de CPFs de propietarios
             System.out.println("");
             System.out.println( "Historico de CPFs de proprietários " + historico);
+            //CPF do atual proprietario
             System.out.println("");
             System.out.println("CPF do proprietário atual: " + cpfDono);
         }
